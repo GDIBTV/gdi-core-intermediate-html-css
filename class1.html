@@ -394,10 +394,10 @@
       <section>
         <h3>Linking on pages</h3>
 <pre><code class = "html">
-&lt;a href = "#section">Go to Section!&lt;/a>
+&lt;a href="#section">Go to Section!&lt;/a>
 </code></pre>
 <pre><code class = "html">
-&lt;a name= "section">&lt;/a>
+&lt;h3 id="section">Section: Heading&lt;/h3>
 </code></pre>
       <p><a href = "http://en.wikipedia.org/wiki/List_of_Crayola_crayon_colors" target = "_blank">Example on Wikipedia</a>
       </section>
@@ -413,7 +413,7 @@
 }
 </code></pre>
 <pre><code class = "html">
-&lt;div class = "turn-blue">I will only turn blue on hover&lt;/div>
+&lt;div class="turn-blue">I will only turn blue on hover&lt;/div>
 </code></pre>
       <style>
       .turn-blue:hover{
@@ -421,7 +421,7 @@
         color: grey
       }
       </style>
-      <span class = "turn-blue">I will only turn blue on hover</span>
+      <span class="turn-blue">I will only turn blue on hover</span>
       </section>
 
       <!-- Fonts-->
@@ -521,12 +521,13 @@ body{
         <section>
           <section>
             <h2>What about the browsers?</h2>
-            <ul>
+            <ul class="browser-list">
               <li class="chrome">Chrome</li>
               <li class="firefox">Firefox</li>
               <li class="ie">Internet Explorer</li>
-              <li class="webkit">Safari</li>
+              <li class="safari">Safari</li>
               <li class="opera">Opera</li>
+			  <li class="etc">… and many others</li>
             </ul>
           </section>
           <section>
