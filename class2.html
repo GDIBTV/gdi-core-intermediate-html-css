@@ -70,7 +70,7 @@
           <li>Enhances display and interactions</li>
         </ul>
       </section>
-
+		
       <section>
         <h2>New Selectors</h2>
       </section>
@@ -297,16 +297,19 @@ input:checked + label {
             <li>Flags it as a work-in-progress</li>
             <li>When finished, the browser should support the non-prefixed name</li>
           </ul>
+			<h3>Good News!</h3>
+			<p>More and more properties no longer need prefixes in modern browsers.</p>
+			<p><a href="http://shouldiprefix.com/">Should I Prefix?</a></p>
         </section>
         <section>
           <h2>Vendor Prefixes</h2>
           <h4>each browser has their own</h4>
-          <ul>
+          <ul class="browser-list">
             <li class="chrome">-webkit-</li>
             <li class="firefox">-moz-</li>
             <li class="ie">-ms-</li>
-            <li class="webkit">-webkit-</li>
-            <li class="opera">-o-</li>
+            <li class="safari">-webkit-</li>
+            <li class="opera">-o-, -webkit-</li>
           </ul>
         </section>
         <section>
@@ -327,7 +330,13 @@ input:checked + label {
           <h2>Vendor Prefixes</h2>
           <ul>
             <li>A little annoying, but totally worth it!</li>
-            <li>Tools available to help (e.g. Compass)</li>
+            <li>Tools available so you don't have to write them all:
+			  <ul>
+				  <li><a href="http://leaverou.github.io/prefixfree/">-prefix-free</a>, a JS solution</li>
+				  <li><a href="http://github.com/postcss/autoprefixer">Autoprefixer</a>, a plugin for your workflow in Grunt/Gulp/etc</li>
+				  <li><a href="http://compass-style.org/">Compass</a>, a authoring framework built on Sass</li>
+			  </ul>
+			</li>
           </ul>
         </section>
       </section>
@@ -407,17 +416,6 @@ input:checked + label {
             <div class="example" id="example5">
             </div>
           </article>
-        </section>
-        <section>
-          <h2>Border-Radius</h2>
-          <p>Remember vendor prefixes? This is where we would use one</p>
-          <pre><code>
-#example1 {
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-}
-          </code></pre>
         </section>
       </section>
 
@@ -807,6 +805,23 @@ background-image: url('../images/html5-features.png'),
           </article>
           <a href="http://cubic-bezier.com/" target="_blank">cubic-bezier</a>
         </section>
+        <section>
+          <h2>Transitions</h2>
+          <p>Remember vendor prefixes? We need them here:</p>
+          <pre><code>
+.example1 {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  
+  -webkit-transition-duration: 3s;
+  -moz-transition-duration: 3s;
+  -o-transition-duration: 3s;
+  transition-duration: 3s;
+}
+          </code></pre>
+        </section>		  
       </section>
 
       <!-- Transformations-->
