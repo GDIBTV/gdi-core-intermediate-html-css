@@ -60,7 +60,183 @@
         </div>
       </section>
 
-      <!-- What is Microdata-->
+      <!-- HTML5 Forms-->
+		<section>
+			<section>
+				<h2>HTML5 Forms</h2>
+				<p>Forms are nothing new to HTML, but HTML5 has supercharged them with new field types, new attributes, browser-based validation, and a variety of new user interactions.</p>
+
+			</section>
+			<section>
+				<h2>New Form Fields</h2>
+				<ul>
+					<li>email</li>
+					<li>url</li>
+					<li>search</li>
+					<li>number</li>
+					<li>range</li>
+					<li>date</li>
+					<li>… <a href="http://html5doctor.com/html5-forms-input-types/" rel="externl" target="_blank">and more</a></li>
+				</ul>
+			</section>
+			<section>
+				<h2>New Form Attributes</h2>
+				<ul>
+					<li>placeholder</li>
+					<li>autofocus</li>
+					<li>required</li>
+					<li>pattern</li>
+					<li>list</li>
+					<li>novalidate</li>
+					<li>… <a href="http://html5doctor.com/html5-forms-introduction-and-new-attributes/" rel="external" target="_blank">an many others</a></li>
+				</ul>
+			</section>
+
+		</section>
+		
+		<section>
+			<section>
+				<h2>HTML5 Forms: email</h2>
+				
+				
+				<pre><code>&lt;input type="email" name="email" required 
+	placeholder="username@domain.com"></code></pre>
+				
+				<form method="post" class="example-form">
+					<input type="email" name="email" required 
+	placeholder="username@domain.com">
+					<input type="submit" value="See it in action">
+				</form>
+				
+			</section>
+			<section>
+				<h2>HTML5 Forms: url</h2>
+								
+				<pre><code>&lt;input type="url" name="url" required 
+  placeholder="http://mydomain.com">
+&lt;input type="url" name="github_url" 
+  placeholder="http://myusername.github.com"></code></pre>
+				
+				<form method="post" class="example-form">
+					<input type="url" name="url" required placeholder="http://mydomain.com"><br>
+					<input type="url" name="github_url" placeholder="http://myusername.github.com"><br>
+					<input type="submit" value="See it in action">
+				</form>
+				
+			</section>
+			<section>
+				<h2>HTML5 Forms: search</h2>
+				
+				<pre><code>&lt;input type="search" name="search" required 
+  placeholder="Ex: A8123" 
+  pattern="^P[0-9]{4,5}$"
+  minlength="5" maxlength="6"></code></pre>
+				
+				<form method="post" class="example-form">
+					<p style="font-size: .75em;"><label>Search by Product ID:</label>
+					<input type="search" name="search" required placeholder="Ex: P8123" pattern="^P[0-9]{4,5}$" minlength="5" maxlength="6">
+						<input type="submit" value="See it in action">
+					<br>
+						<small>Product IDs start with a 'P', followed by 4 or 5 numbers</small>
+					</p>
+				</form>
+				
+			</section>
+
+			<section>
+				<h2>HTML5 Forms: number</h2>
+								
+				<pre><code>&lt;input type="number" name="number" required 
+  placeholder="Quantity"
+  step="12" min="12" max="144"></code></pre>
+				
+				<form method="post" class="example-form">
+					<input type="number" name="number" required placeholder="Quantity" step="12" min="12" max="144" style="min-width: 100px;">
+					<input type="submit" value="See it in action">
+				</form>
+				
+			</section>
+
+			<section>
+				<h2>HTML5 Forms: range</h2>
+								
+				<pre><code>&lt;input type="range" name="range" required 
+	min="0" max="100" step="10" 
+	value="20">
+&lt;output for="range" id="rating">20&lt;/output></code></pre>
+				
+				<form method="post" class="example-form">
+					<input type="range" name="range" required min="0" max="100" step="10" value="20"
+						oninput="showVote(value)">
+					<output for="range" id="rating">20</output>
+					<script>var showVote = function(value) {document.querySelector('#rating').value = value;}</script>
+				</form>
+				
+				<p><small>There’s JS behind the scenes that modifies the value shown.</small></p>
+				
+			</section>			
+
+			<section>
+				<h2>HTML5 Forms: date</h2>
+								
+				<pre><code>&lt;form method="post" novalidate>
+  &lt;input type="date" name="date" required>
+&lt;form></code></pre>
+				
+				<form method="post" novalidate class="example-form">
+					<input type="date" name="date" required>
+					<input type="submit" value="See it in action">
+				</form>
+				
+			</section>
+
+			<section>
+				<h2>HTML5 Forms: datalist</h2>
+				
+				
+				<pre><code>&lt;input type="text" name="favorite_woman" 
+  placeholder="Who is your hero?"
+  list="women" required>
+&lt;datalist id="women">		
+  &lt;option value="Ada Lovelace" >
+  &lt;option value="Grace Hopper">
+  &lt;option value="Frances Allen">
+  &lt;option value="Barbara Liskov">
+  &lt;option value="Anita Borg">
+  &lt;option value="Maria Klawe">
+&lt;/datalist></code></pre>
+
+
+				
+				<form method="post" class="example-form">
+					<input type="text" name="favorite_women" required 
+	placeholder="Who is your hero?" list="women">
+					<datalist id="women">		
+						<option value="Ada Lovelace" >
+						<option value="Grace Hopper">
+						<option value="Frances Allen">
+						<option value="Barbara Liskov">
+						<option value="Anita Borg">
+						<option value="Maria Klawe">
+					</datalist>		
+					<input type="submit" value="See it in action">
+				</form>
+				
+			</section>		
+	
+		</section>
+			
+		<section>
+			<section>
+				<h2>HTML5 Form Browser Support</h2>
+				<p><a href="http://caniuse.com/#feat=forms" rel="external" target="_blank">Can I Use HTML5 Form Features</a></p>
+				<p><strong>There’s no reason to <em>not</em> start using these fields now!</strong></p>
+				<p>But, sometimes you'll need a JavaScript fallback for the fancier parts like date pickers.</p>
+				<p><a href="http://diveintohtml5.info/forms.html" rel="external" target="_blank">Dive Into HTML5 Forms</a></p>
+			</section>
+		</section>
+		
+	  <!-- What is Microdata-->
       <section>
         <section>
           <h2>Microdata</h2>
@@ -77,7 +253,7 @@
           <h2>Microdata</h2>
           <p class="yellow">Sounds <strong>BORING</strong></p>
           <p>Why should I care?</p>
-          <img src="images/bored-cat.jpg" alt=""/>
+          <img src="images/bored-cat.jpg" style="max-height:300px;" alt=""/>
         </section>
         <section>
           <h2>Microdata</h2>
@@ -537,6 +713,14 @@
       });
 
     </script>
+<script>
+	$(function(){
+		$('.example-form').on('submit', function(event){
+			alert('The form can submit!');
+			event.preventDefault();
+		});
+	});
+</script>
 
   </body>
 </html>
