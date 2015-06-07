@@ -272,6 +272,54 @@ header:after {
   color: #FF6F00;
 }
 
+/* Nominate */
+form {
+  font-size: 1.2em;
+  margin: 50px;
+}
+fieldset {
+  margin-bottom: 20px;
+  padding: 10px;
+}
+fieldset:first-of-type {
+  background-color: white;
+}
+legend {
+  text-align: center;
+  font-family: 'Audiowide', cursive;
+}
+label {
+  display: inline-block;
+  padding-right: 20px;
+  text-align: right;
+  vertical-align: text-top;
+  width: 40%;
+}
+label ~ textarea {
+  vertical-align: top;
+}
+label small {
+  color: gray;
+  display: block;
+  font-size: .8em;
+}
+input, textarea {
+  display: inline-block;
+  width: 40%;
+  padding: 2px 5px;
+  font-size: 1.2em;  
+}
+input[type='submit'] {
+  background-color: #009D92;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+input[type='submit']:hover, input[type='submit']:focus {
+  background-color: #FFA700;
+}
 
 /* Footer */
 footer {
